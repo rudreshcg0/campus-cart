@@ -1,0 +1,78 @@
+/**
+ * Campus Cart - Authentication Stylesheet (auth.css)
+ * Clean Academic Portal Login & Registration
+ */
+
+.cc-auth-container {
+  max-width: 440px;
+  margin: 30px auto;
+  background-color: #ffffff;
+  border: 1px solid var(--cc-border);
+  border-radius: var(--cc-radius);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+}
+
+.cc-auth-header {
+  background-color: var(--cc-bg-subtle);
+  border-bottom: 1px solid var(--cc-border);
+  padding: 22px 24px;
+  text-align: center;
+}
+
+.cc-auth-badge {
+  display: inline-block;
+  background-color: var(--cc-primary);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: var(--cc-radius);
+  margin-bottom: 8px;
+}
+
+.cc-auth-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--cc-text-main);
+  margin-bottom: 4px;
+}
+
+.cc-auth-subtitle {
+  font-size: 13px;
+  color: var(--cc-text-subtle);
+}
+
+.cc-auth-body {
+  padding: 24px;
+}
+
+.cc-auth-footer {
+  border-top: 1px solid var(--cc-border);
+  background-color: var(--cc-bg-subtle);
+  padding: 14px 24px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--cc-text-muted);
+}
+
+.cc-auth-footer a {
+  font-weight: 600;
+  color: var(--cc-primary);
+}
+
+.cc-demo-creds {
+  background-color: var(--cc-primary-light);
+  border: 1px dashed #bfdbfe;
+  border-radius: var(--cc-radius);
+  padding: 10px 14px;
+  margin-bottom: 18px;
+  font-size: 12px;
+  color: var(--cc-text-muted);
+}
+
+.cc-demo-creds strong {
+  color: var(--cc-primary);
+  display: block;
+  margin-bottom: 3px;
+}

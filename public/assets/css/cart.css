@@ -1,0 +1,267 @@
+/**
+ * Campus Cart - Cart Page & Checkout Modal Stylesheet (cart.css)
+ */
+
+.cc-cart-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.cc-cart-table-card {
+  background-color: #ffffff;
+  border: 1px solid var(--cc-border);
+  border-radius: var(--cc-radius);
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.cc-cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.cc-cart-table th {
+  background-color: var(--cc-bg-subtle);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--cc-text-muted);
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--cc-border);
+}
+
+.cc-cart-table td {
+  padding: 16px;
+  border-bottom: 1px solid #f1f5f9;
+  vertical-align: middle;
+}
+
+.cc-cart-table tr:last-child td {
+  border-bottom: none;
+}
+
+.cc-cart-item-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.cc-cart-item-thumb {
+  width: 54px;
+  height: 54px;
+  border-radius: var(--cc-radius);
+  object-fit: cover;
+  border: 1px solid var(--cc-border);
+  background-color: #f8fafc;
+  flex-shrink: 0;
+}
+
+.cc-cart-item-title {
+  font-weight: 600;
+  color: var(--cc-text-main);
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+.cc-cart-item-cat {
+  font-size: 11px;
+  color: var(--cc-text-subtle);
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+.cc-cart-price {
+  font-family: var(--cc-font-mono);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--cc-text-main);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Cart Summary Card */
+.cc-cart-summary-card {
+  background-color: #ffffff;
+  border: 1px solid var(--cc-border);
+  border-radius: var(--cc-radius);
+  padding: 22px 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.cc-summary-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--cc-text-main);
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.cc-summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: var(--cc-text-muted);
+  margin-bottom: 12px;
+}
+
+.cc-summary-row.total {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--cc-primary);
+  border-top: 1px solid var(--cc-border);
+  padding-top: 14px;
+  margin-top: 14px;
+}
+
+.cc-summary-total-val {
+  font-family: var(--cc-font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.cc-badge-free {
+  color: var(--cc-success);
+  font-weight: 700;
+  font-size: 11px;
+}
+
+/* Payment Modal */
+.cc-modal-backdrop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(15, 23, 42, 0.6);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.cc-modal-backdrop.open {
+  display: flex;
+}
+
+.cc-modal-dialog {
+  background-color: #ffffff;
+  border-radius: var(--cc-radius);
+  width: 100%;
+  max-width: 520px;
+  border: 1px solid var(--cc-border-strong);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  animation: modalSlide 0.2s ease-out;
+}
+
+@keyframes modalSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cc-modal-header {
+  background-color: var(--cc-bg-subtle);
+  border-bottom: 1px solid var(--cc-border);
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cc-modal-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--cc-text-main);
+}
+
+.cc-modal-close {
+  background: none;
+  border: none;
+  font-size: 20px;
+  line-height: 1;
+  color: var(--cc-text-subtle);
+  cursor: pointer;
+}
+
+.cc-modal-close:hover {
+  color: var(--cc-text-main);
+}
+
+.cc-modal-body {
+  padding: 20px;
+}
+
+.cc-payment-methods {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.cc-payment-method-card {
+  border: 1px solid var(--cc-border);
+  border-radius: var(--cc-radius);
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.cc-payment-method-card:hover {
+  background-color: var(--cc-bg-subtle);
+  border-color: var(--cc-accent);
+}
+
+.cc-payment-method-card input[type="radio"] {
+  accent-color: var(--cc-primary);
+}
+
+.cc-payment-method-info {
+  flex: 1;
+}
+
+.cc-payment-method-name {
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--cc-text-main);
+}
+
+.cc-payment-method-sub {
+  font-size: 11px;
+  color: var(--cc-text-subtle);
+}
+
+.cc-payment-dynamic-fields {
+  background-color: var(--cc-bg-subtle);
+  border: 1px solid var(--cc-border);
+  border-radius: var(--cc-radius);
+  padding: 14px 16px;
+  margin-bottom: 16px;
+}
+
+.cc-modal-footer {
+  border-top: 1px solid var(--cc-border);
+  padding: 14px 20px;
+  background-color: var(--cc-bg-subtle);
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .cc-cart-layout {
+    grid-template-columns: 1fr;
+  }
+}

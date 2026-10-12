@@ -1,0 +1,98 @@
+/**
+ * Campus Cart - Sell Page Stylesheet (sell.css)
+ * Direct Listing Creator & Form Layout
+ */
+
+.cc-sell-layout {
+  display: grid;
+  grid-template-columns: 2fr 1.1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.cc-sell-card {
+  background-color: #ffffff;
+  border: 1px solid var(--cc-border);
+  border-radius: var(--cc-radius);
+  padding: 24px 28px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.cc-sell-guidelines-card {
+  background-color: #ffffff;
+  border: 1px solid var(--cc-border);
+  border-radius: var(--cc-radius);
+  padding: 20px 24px;
+}
+
+.cc-guideline-header {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--cc-primary);
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.cc-guideline-list {
+  list-style: none;
+  font-size: 13px;
+  color: var(--cc-text-muted);
+}
+
+.cc-guideline-list li {
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.cc-guideline-list strong {
+  color: var(--cc-text-main);
+  display: block;
+}
+
+.cc-price-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.cc-currency-symbol {
+  position: absolute;
+  left: 12px;
+  font-weight: 700;
+  color: var(--cc-text-muted);
+}
+
+.cc-price-input {
+  padding-left: 28px !important;
+  font-family: var(--cc-font-mono);
+}
+
+.cc-preview-box {
+  margin-top: 10px;
+  width: 100%;
+  height: 160px;
+  border: 1px dashed var(--cc-border);
+  border-radius: var(--cc-radius);
+  background-color: var(--cc-bg-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: var(--cc-text-subtle);
+  font-size: 12px;
+}
+
+.cc-preview-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 860px) {
+  .cc-sell-layout {
+    grid-template-columns: 1fr;
+  }
+}
